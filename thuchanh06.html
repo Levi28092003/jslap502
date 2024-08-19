@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // khai bao bien
+        var sochan = sole="";
+        var tongle = tongchan = 0;
+        // Khai bao mang
+        var dataArr = [4,6,7,8,,8,10,233,1113,553,111,556];
+        // in ra số lượng phần tử trong mảng
+        document.write("Số phần tử trong mảng: "+dataArr.length+"<br/>");
+        // duyệt từng phần tử trong mảng
+        for(let i = 0; i < dataArr.length; i++){
+            // kiểm tra số chẵn lẻ
+            if(dataArr[i]%2 == 0){
+                tongchan += dataArr[i];
+                if(sochan.length == 0){
+                    sochan =dataArr[i];
+                }
+                else{
+                    sochan += ","+dataArr[i];
+                }
+            }else{
+                tongle += dataArr[i];
+                if(sole.lenngth == 0){
+                    sole = dataArr[i];
+                }else{
+                    sole += ","+dataArr[i];
+                }
+            }
+        }
+        document.write("Trong mảng có các số chẵn là:"+sochan+"<br/>");
+        document.write("Tổng các số:" +tongchan+"<br/>");
+        document.write("Trong mảng có các số lẻ là:"+sole+"<br/>");
+        document.write("Tổng các số:"+tongle+"<br/>");
+    </script>
+</body>
+</html>

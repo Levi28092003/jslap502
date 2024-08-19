@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n = parseInt(prompt("Moi nhap vao n"));
+        do{
+            if(n > 9 && n < 100){
+                console.log("True");
+            }else{
+                n = parseInt(prompt("Moi nhap vao n"));
+            }
+        }while(n <= 9 || n >= 100);
+        var a = 0;  // Biến đếm số chẵn
+        var sum = 0;   // Biến tổng số chẵn bằng 0
+        var sum1 = 0; // Biến tổng số lẻ bằng 0
+        var b = 0; // Biến đếm số lẻ
+        for(let i = 1; i <= n; i++){
+            if(i%2 == 0){
+                a++;
+                sum += i;
+            }else{
+                b++;
+                sum1 += i;
+            }
+        }
+        document.write("<br>Có ", a," số chẵn");
+        document.write("<br>Có ", b," số lẻ");
+        document.write("<br>Tổng các số chẵn là: " ,sum);
+        document.write("<br>Tổng các số lẻ là: " ,sum1);
+
+
+    </script>
+    
+</body>
+</html>
